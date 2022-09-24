@@ -11,6 +11,7 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @Entity
+@Table(name = "product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
