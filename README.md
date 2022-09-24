@@ -20,3 +20,14 @@ Made with :heart: by the GRUPO 2 - MINTIC @2022.
 </div>
 
 [![VET APP demo](https://github.com/raulrobinson/grupo2ruta2utp/blob/master/img/ArquitecturaApp.jpg)](http://demo.org/)
+
+## Getting Started
+
+Este desarrollo comprende ...........
+
+## Installation
+
+This document is for the latest VET APP **1.0.0 release and later**.
+
+- Stable release: 1.0.0 (TYPO3 10/11 LTS)
+- LTS release: 1.0.1 (TYPO3 10/11 LTS)
