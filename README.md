@@ -34,4 +34,6 @@ This document is for the latest VET APP **1.0.0 release and later**.
 
 ### Database setup
 
-Dentro del directorio Database se encuentra un Dump de la base de datos denominada **vetsystem***
+Dentro del directorio Database se encuentra un Dump de la base de datos denominada **vetsystem** archivo vetsystem.sql.
+
+
