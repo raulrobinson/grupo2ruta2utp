@@ -6,12 +6,11 @@
 
 # VET APP - CRM 
 
-[![crates.io][crates.io-badge]][crates.io]
-[![Downloads][downloads-badge]][releases]
-[![License][license-badge]][license]
-[![Built with Nix][builtwithnix-badge]][builtwithnix]
+[![Total Downloads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
+[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
-zoxide is a **smarter cd command**, inspired by z and autojump.
+VET APP is a **smarter cd command**, inspired by students of Group 3 - Cicle 3 - Ruta 2 - UTP - MinTIC.
 
 It remembers which directories you use most frequently, so you can "jump" to
 them in just a few keystrokes.<br />
@@ -22,6 +21,6 @@ zoxide works on all major shells.
 [Configuration](#configuration) •
 [Integrations](#third-party-integrations)
 
-</div>
+Made with :heart: by the GRUPO 2 of the RUTA 2 - UTP - MINTIC @2022.
 
-### Made with :heart: by the GRUPO 2 of the RUTA 2 - UTP - MINTIC @2022.
+</div>
