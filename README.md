@@ -31,3 +31,7 @@ This document is for the latest VET APP **1.0.0 release and later**.
 
 - Stable release: 1.0.0 (TYPO3 10/11 LTS)
 - LTS release: 1.0.1 (TYPO3 10/11 LTS)
+
+### Database setup
+
+Dentro del directorio Database se encuentra un Dump de la base de datos denominada **vetsystem***
