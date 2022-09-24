@@ -4,5 +4,4 @@
 
 #  VET APP - CRM 
 
-### RUTA 2 - UTP - MINTIC @2022.
-### Made with :heart: by the GRUPO 2
+### Made with :heart: by the GRUPO 2 of the RUTA 2 - UTP - MINTIC @2022.
