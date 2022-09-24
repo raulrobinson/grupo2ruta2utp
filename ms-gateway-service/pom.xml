@@ -8,11 +8,11 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.rasysbox</groupId>
-	<artifactId>jwt.auth</artifactId>
+	<groupId>com.grupo2.utp</groupId>
+	<artifactId>vet-gateway-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jwt.auth</name>
-	<description>JWT Authentication Token with MySQL database</description>
+	<name>vet-gateway-service</name>
+	<description>Gateway with JWT Authentication Token for VET system</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
