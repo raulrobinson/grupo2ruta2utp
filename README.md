@@ -12,6 +12,7 @@ VET APP is a **Smart WebApp build over Microservices integrating CRM**, inspired
 
 [Getting started](#getting-started) •
 [Installation](#installation) •
+[Database](#database-setup) •
 [Configuration](#configuration) •
 [Integrations](#third-party-integrations)
 
@@ -23,14 +24,16 @@ Made with :heart: by the GRUPO 2 - MINTIC @2022.
 
 ## Getting Started
 
+This document is for the latest VET APP **1.0.0 release and later**.
+
 Este desarrollo comprende ...........
 
 ## Installation
 
-This document is for the latest VET APP **1.0.0 release and later**.
+Microservicios realizados en el framework Java Spring Boot, siguiendo el patron de diseño MVC.
 
-- Stable release: 1.0.0 (TYPO3 10/11 LTS)
-- LTS release: 1.0.1 (TYPO3 10/11 LTS)
+- Stable release: 1.0.0 (Java 11 / OpenJDK)
+- LTS release: 1.0.1 (Java 11 / Maven POM.xml)
 
 ### Database setup
 
