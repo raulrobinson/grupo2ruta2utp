@@ -1,6 +1,6 @@
-package org.example;
+package com.grupo2.utp;
 
-public class Main {
+public class AppApplication {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
