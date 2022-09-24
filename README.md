@@ -10,13 +10,13 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
 [![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
-VET APP is a **smarter cd command**, inspired by students of Group 3 - Cicle 3 - Ruta 2 - UTP - MinTIC.
+VET APP is a **Smart WebApp build over Microservices integrating CRM**, inspired by students of the Route2 of MinTIC program.
 
 [Getting started](#getting-started) •
 [Installation](#installation) •
 [Configuration](#configuration) •
 [Integrations](#third-party-integrations)
 
-Made with :heart: by the GRUPO 2 of the RUTA 2 - UTP - MINTIC @2022.
+Made with :heart: by the GRUPO 2 - MINTIC @2022.
 
 </div>
