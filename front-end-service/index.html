@@ -56,7 +56,7 @@
           </li>
           <li class="nav-item mx-5">
             <a class="nav-link py-3 d-md-inline-block" href="./modulos/login.php"
-              style="color: #333; font-size: 22px;">Usuarios</a>
+              style="color: #333; font-size: 22px;" data-bs-toggle="modal" data-bs-target="#ModalForm">Usuarios</a>
           </li>
         </ul>
       </div>
@@ -379,6 +379,32 @@
         </div>
         <div class="modal-body"></div>
         <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Login Modal-->
+  <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="myform bg-dark">
+            <h1 class="text-center">Admin's Tienda</h1>
+            <form id="loginform" name="loginform">
+              <div class="mb-3 mt-4">
+                <label for="username" class="form-label">Usuario</label>
+                <input type="text" class="form-control text-center" name="username" id="username" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control text-center" name="password" id="password">
+              </div>
+              <button type="submit" class="btn btn-light mt-3">INGRESAR</button>
+              <p>Area administrativa</p>
+            </form>
+          </div>
         </div>
       </div>
     </div>

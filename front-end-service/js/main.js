@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  /**Boton ir Arriba */
   $('.ir-arriba').click(function () {
     $('body, html').animate({
       scrollTop: '0px'
@@ -12,6 +13,44 @@ $(document).ready(function () {
       $('.ir-arriba').slideUp(300);
     }
   });
+
+  /**LOGIN USUARIO**/
+  $('#loginform').submit(function (event) {
+
+    event.preventDefault();
+
+    var data = { 'username': $('#username').val(), 'password': $('#password').val() };
+
+    console.log(data)
+
+    $.ajax({
+      type: "POST",
+      contentType: "application/json",
+      url: "http://localhost:9000/api/auth/signin",
+      data: JSON.stringify(data),
+      dataType: 'json',
+      cache: false,
+      timeout: 600000,
+      success: function (data) {
+        var json = "<h4>Ajax Response</h4>&lt;pre&gt;"
+          + JSON.stringify(data, null, 4) + "&lt;/pre&gt;";
+        $('#feedback').html(json);
+
+        console.log("SUCCESS : ", data);
+        $("#btn-search").prop("disabled", false);
+      },
+      error: function (e) {
+        var json = "<h4>Ajax Response</h4>&lt;pre&gt;"
+          + e.responseText + "&lt;/pre&gt;";
+        $('#feedback').html(json);
+
+        console.log("ERROR : ", e);
+        $("#btn-search").prop("disabled", false);
+      }
+    });
+
+
+  });	
 
   function tituloModal(referencia) {
 

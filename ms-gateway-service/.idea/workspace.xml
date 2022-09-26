@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57c6ce7a-fe39-4670-b769-6dba82c64f87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Database/vetsystem.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/vetsystem.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end-service/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-service/css/product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end-service/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-service/fonts/icomoon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end-service/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-service/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-product-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-product-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-product-service/src/main/java/com/grupo2/utp/AppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-product-service/src/main/java/com/grupo2/utp/AppApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="57c6ce7a-fe39-4670-b769-6dba82c64f87" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
