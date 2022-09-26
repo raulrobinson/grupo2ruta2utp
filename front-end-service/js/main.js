@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   /**Boton ir Arriba */
   $('.ir-arriba').click(function () {
     $('body, html').animate({
@@ -52,6 +53,7 @@ $(document).ready(function () {
 
   });	
 
+  /**Titulos de Productos */
   function tituloModal(referencia) {
 
     var Besties = $('#Besties').text();
