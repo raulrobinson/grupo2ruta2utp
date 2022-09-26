@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c6ce7a-fe39-4670-b769-6dba82c64f87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../MS-VET-Food/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MS-VET-Medicine/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/vetsystem.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/vetsystem.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end-service/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-service/css/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end-service/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-service/fonts/icomoon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end-service/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-service/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-product-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-product-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-product-service/src/main/java/com/grupo2/utp/AppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-product-service/src/main/java/com/grupo2/utp/AppApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +59,29 @@
     "RESTKit.sync": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Desktop/GRUPO2-RUTA2-CICLO3-UTP/MS-VET-Food"
+    "last_opened_file_path": "D:/Desktop/GRUPO2-RUTA2-CICLO3-UTP/ms-gateway-service"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="SpringJWTAuthApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rasysbox.jwt.auth.SpringJWTAuthApplication" />
+      <module name="vet-gateway-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rasysbox.jwt.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpringJWTAuthApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
