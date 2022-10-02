@@ -1,7 +1,6 @@
 package com.grupo2.utp.controller;
 
 import com.grupo2.utp.dto.ProductDTO;
-import com.grupo2.utp.entity.Product;
 import com.grupo2.utp.model.ProductModel;
 import com.grupo2.utp.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +20,9 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
+    // --------------------------------------------------------------------------------------------//
     // --------------- RETRIEVE ALL PRODUCTS FROM STORE -------------------------------------------//
+    // --------------------------------------------------------------------------------------------//
     @GetMapping("/all")
     public ResponseEntity<List<ProductModel>> getAllProducts() {
         var productList = productService.getAll();
@@ -31,8 +32,9 @@ public class ProductController {
         return ResponseEntity.ok().body(productList);
     }
 
-    // --------------- RETRIEVE PRODUCT BY ID - CODE - NAME - TYPE - STATE -----------------------//
-    // --------------- TYPE: A = Foods. M = Medicine ---------------------------------------------//
+    // --------------------------------------------------------------------------------------------//
+    // --------------- RETRIEVE PRODUCT BY ID - CODE - NAME - TYPE - STATE ------------------------//
+    // --------------- TYPE: A = Foods. M = Medicine ----------------------------------------------//
     @GetMapping("")
     public List<ProductModel> findByProduct(
             @RequestParam(value = "productId", required = false) String productId,
@@ -70,21 +72,27 @@ public class ProductController {
         return new ArrayList<>();
     }
 
-    // --------------- CREATE PRODUCT ------------------------------------------------//
+    // --------------------------------------------------------------------------------------------//
+    // --------------- CREATE PRODUCT -------------------------------------------------------------//
+    // --------------------------------------------------------------------------------------------//
     @PostMapping("")
-    public Product createProduct(@RequestBody ProductDTO productDTO) {
+    public Long createProduct(@RequestBody ProductDTO productDTO) {
 
         return productService.createProduct(productDTO);
     }
 
-    // --------------- UPDATE PRODUCT ------------------------------------------------//
+    // --------------------------------------------------------------------------------------------//
+    // --------------- UPDATE PRODUCT -------------------------------------------------------------//
+    // --------------------------------------------------------------------------------------------//
     @PutMapping("")
-    public Product updateProduct(@RequestBody ProductDTO productDTO) {
+    public Long updateProduct(@RequestBody ProductDTO productDTO) {
 
         return productService.updateProduct(productDTO);
     }
 
-    // --------------- DELETE PRODUCT ------------------------------------------------//
+    // --------------------------------------------------------------------------------------------//
+    // --------------- DELETE PRODUCT -------------------------------------------------------------//
+    // --------------------------------------------------------------------------------------------//
     @DeleteMapping("")
     public Long deleteProduct(@RequestBody ProductDTO productDTO) {
 

@@ -69,38 +69,46 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product createProduct(ProductDTO productDTO) {
+    public Long createProduct(ProductDTO productDTO) {
         boolean checkCode = productRepository.existsByProductCode(productDTO.getProductCode());
         if (checkCode) {
             var message = "Error creating product, the product code already exists";
             log.error(message, HttpStatus.BAD_REQUEST);
             throw new BadRequestException(message);
         }
-        var product = new Product();
-        product.setProductCode(productDTO.getProductCode());
-        product.setProductName(productDTO.getProductName());
-        product.setProductType(productDTO.getProductType());
-        product.setProductDescription(productDTO.getProductDescription());
-        product.setProductPrice(productDTO.getProductPrice().toString());
-        product.setProductState(productDTO.getProductState());
-        product.setProductStock(productDTO.getProductStock());
-        productRepository.save(product);
+        var product = fillProduct(new Product(), productDTO);
+        product = productRepository.save(product);
 
-        return product;
+        return product.getId();
     }
 
     @Override
-    public Product updateProduct(ProductDTO productDTO) {
-        //var productCode = productRepository.getByProductCode(productDTO.getProductCode());
-        //var product = new Product();
+    public Long updateProduct(ProductDTO productDTO) {
+        var product = productRepository.getReferenceById(productDTO.getId());
+        product = productRepository.save(fillProduct(product, productDTO));
 
-        return null;
+        return product.getId();
     }
 
     @Override
     public Long deleteProduct(ProductDTO productDTO) {
+        var product = productRepository.getReferenceById(productDTO.getId());
+        productRepository.delete(product);
 
-        return null;
+        return productDTO.getId();
+    }
+
+    public Product fillProduct(Product product, ProductDTO productDTO){
+        product.setId(productDTO.getId());
+        product.setProductName(productDTO.getProductName());
+        product.setProductCode(productDTO.getProductCode());
+        product.setProductDescription(productDTO.getProductDescription());
+        product.setProductType(productDTO.getProductType());
+        product.setProductPrice(productDTO.getProductPrice().toString());
+        product.setProductState(productDTO.getProductState());
+        product.setProductStock(productDTO.getProductStock());
+
+        return product;
     }
 
 }
