@@ -15,92 +15,32 @@ $(document).ready(function () {
     }
   });
 
-  /**LOGIN USUARIO**/
-  $('#loginform').submit(function (event) {
+});
 
-    event.preventDefault();
+$.getJSON("http://localhost:9000/api/v1/products/all", function (data) {
+  console.log(data)
+  $('#titulo-1').text(data[0].productName)
+  $('#precio-1').text("$ "+humanizeNumber(data[0].productPrice))
 
-    var data = { 'username': $('#username').val(), 'password': $('#password').val() };
+  $('#titulo-2').text(data[1].productName)
+  $('#precio-2').text("$ "+humanizeNumber(intlRound(data[1].productPrice)))
 
+}, JSON)
+
+function tituloModal(referencia) {
+
+  $.getJSON("http://localhost:9000/api/v1/products/all", function (data) {
     console.log(data)
-
-    $.ajax({
-      type: "POST",
-      contentType: "application/json",
-      url: "http://localhost:9000/api/auth/signin",
-      data: JSON.stringify(data),
-      dataType: 'json',
-      cache: false,
-      timeout: 600000,
-      success: function (data) {
-        var json = "<h4>Ajax Response</h4>&lt;pre&gt;"
-          + JSON.stringify(data, null, 4) + "&lt;/pre&gt;";
-        $('#feedback').html(json);
-
-        console.log("SUCCESS : ", data);
-        $("#btn-search").prop("disabled", false);
-      },
-      error: function (e) {
-        var json = "<h4>Ajax Response</h4>&lt;pre&gt;"
-          + e.responseText + "&lt;/pre&gt;";
-        $('#feedback').html(json);
-
-        console.log("ERROR : ", e);
-        $("#btn-search").prop("disabled", false);
-      }
-    });
-
-
-  });	
-
-  /**Titulos de Productos */
-  function tituloModal(referencia) {
-
-    var Besties = $('#Besties').text();
-    var Equilibrio = $('#Equilibrio').text();
-    var GuaumorCachorros = $('#GuaumorCachorros').text();
-    var PedigreeAlimentoParaPerro = $('#PedigreeAlimentoParaPerro').text();
-    var alimento5 = $('#alimento5').text();
-    var alimento6 = $('#alimento6').text();
-    var alimento7 = $('#alimento7').text();
-    var alimento8 = $('#alimento8').text();
-    var alimento9 = $('#alimento9').text();
-    var alimento10 = $('#alimento10').text();
-    var alimento11 = $('#alimento11').text();
-    var alimento12 = $('#alimento12').text();
-    var alimento13 = $('#alimento13').text();
-    var alimento14 = $('#alimento14').text();
-    var alimento15 = $('#alimento15').text();
-    var alimento16 = $('#alimento16').text();
-    var alimento17 = $('#alimento17').text();
-    var alimento18 = $('#alimento18').text();
-    var alimento19 = $('#alimento19').text();
-    var alimento20 = $('#alimento20').text();
-    var alimento21 = $('#alimento21').text();
-    var alimento22 = $('#alimento22').text();
-    var alimento23 = $('#alimento23').text();
-    var alimento24 = $('#alimento24').text();
-    var farmacia25 = $('#farmacia25').text();
-    var farmacia26 = $('#farmacia26').text();
-    var farmacia27 = $('#farmacia27').text();
-    var farmacia28 = $('#farmacia28').text();
-    var farmacia29 = $('#farmacia29').text();
-    var farmacia30 = $('#farmacia30').text();
-    var farmacia31 = $('#farmacia31').text();
-    var farmacia32 = $('#farmacia32').text();
-    var farmacia33 = $('#farmacia33').text();
-    var farmacia34 = $('#farmacia34').text();
-    var farmacia35 = $('#farmacia35').text();
-    var farmacia36 = $('#farmacia36').text();
+    $('#titulo-1').text(data[0].productName)
 
     if (referencia == 1) {
-      $('#exampleModalLabel').text(Besties);
-      $('.modal-body').text("Besties® Besties - Alimento Perros Adultos Sabor Carne y Pollo, es una fórmula diseñada para la óptima nutrición salud de tu perro con Carbohidratos, proteínas, lípidos, minerales y vitaminas. Proteína de origen animal para desarrollar músculos en crecimiento, omegas que promueven una piel saludable y un pelaje brillante, fibra prebiótica que fortalecen la salud intestinal y el equilibrio de la flora intestinal, Vitaminas A, D3, E, K, B1, B2, Niacina, B5, B6, B12, B9, aminoácidos y minerales para fortalecer el sistema inmune, calcio y fósforo para huesos y dientes sanos además mejora la consistencia fecal. ")
+      $('#exampleModalLabel').text(data[0].productName);
+      $('.modal-body').text(data[0].productDescription)
     }
 
     if (referencia == 2) {
-      $('#exampleModalLabel').text(Equilibrio);
-      $('.modal-body').text("Equilibrio® Equilibrio - Razas Grandes Adulto, es un alimento para perros se encarga de dar los nutrientes necesarios para fortalecer los huesos, las articulaciones y lo órganos de los perros que tienen un cuerpo grande y pesado. Ventajas,. Sulfato de condroitina y glucosamina para construir articulaciones fuertes y saludables, proteína y energía en cantidades adecuadas para mantener el peso y la masa muscular magra, L-Carnitina y Taurina para proteger la función cardiaca. ")
+      $('#exampleModalLabel').text(data[1].productName);
+      $('.modal-body').text(data[1].productDescription)
     }
 
     if (referencia == 3) {
@@ -240,6 +180,25 @@ $(document).ready(function () {
       $('.modal-body').text("F® Canisan F® es un antihelmíntico para perros y gatos de suministro oral que actuará en contra de nematodos, cestodos y otros parásitos gastrointestinales que suelen afectar el aparato digestivo de los perros y los gatos. Canisan está formulado para el control de los parásitos más comunes como lo son: Ancylostoma caninum, Toxocara canis, Trichuris vulpis, Oxyuris spp, aenia pisiformis, Echinococcus granulosus, algunos protozoarios, entre otros.")
     }
 
-    console.log(referencia)
+  }, JSON)
+
+}
+
+function humanizeNumber(n){
+  n = n.toString()
+  while (true){
+    var n2 = n.replace(/(\d)(\d{3})($|,|\.)/g, '$1.$2$3')
+    if (n == n2) break
+      n = n2
   }
-});
+  return n
+}
+
+function intlRound(numero, decimales = 2, usarComa = false){
+  var opciones = {
+      maximumFractionDigits: decimales, 
+      useGrouping: false
+  };
+  usarComa = usarComa ? "es" : "en";
+  return new Intl.NumberFormat(usarComa, opciones).format(numero);
+}
