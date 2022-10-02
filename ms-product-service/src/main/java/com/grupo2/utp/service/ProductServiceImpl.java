@@ -16,10 +16,10 @@ public class IproductService implements ProductService {
     @Autowired
     ProductRepository productRepository;
 
-    @Override
-    public Product findByProductCode(int productCode) {
-        return productRepository.findByProductCode(productCode);
-    }
+    /*@Override
+    public Product findProductByCode(int productCode) {
+        return productRepository.findProductByCode(productCode);
+    }*/
 
     @Override
     public Product findByProductName(String productName) {
