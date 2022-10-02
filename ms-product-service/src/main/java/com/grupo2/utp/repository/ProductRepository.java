@@ -4,11 +4,11 @@ import com.grupo2.utp.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-@Repository
+@Repository("productRepository")
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    Product findByProductCode(int productCode);
-    Product findByProductName(String productName);
-    List<Product> findByProductType(String productType);
+    Product getByProductCode(String productCode);
+    Product getByProductName(String productName);
+    Product getByProductType(String productType);
+    Product getByProductState(String productState);
+    boolean existsByProductCode(String productCode);
 }

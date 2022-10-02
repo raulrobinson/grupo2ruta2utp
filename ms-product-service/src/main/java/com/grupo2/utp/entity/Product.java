@@ -1,53 +1,38 @@
 package com.grupo2.utp.entity;
 
 import lombok.*;
-import org.hibernate.Hibernate;
-
 import javax.persistence.*;
-import java.util.Objects;
 
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
 @Entity
-@Table(name = "product")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "VET_PRODUCT")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "VET_ID_PK")
     private Long id;
 
-    @Column(name = "product_name")
+    @Column(name = "PRODUCT_NAME")
     private String productName;
 
-    @Column(name = "product_type")
+    @Column(name = "PRODUCT_TYPE")
     private String productType;
 
-    @Column(name = "product_description")
+    @Column(name = "PRODUCT_DESCRIPTION")
     private String productDescription;
 
-    @Column(name = "product_price")
-    private Double productPrice;
+    @Column(name = "PRODUCT_PRICE")
+    private String productPrice;
 
-    @Column(name = "product_code")
-    private int productCode;
+    @Column(name = "PRODUCT_CODE")
+    private String productCode;
 
-    @Column(name = "product_state")
-    private boolean productState;
+    @Column(name = "PRODUCT_STATE")
+    private String productState;
 
-    @Column(name = "product_stock")
-    private int productStock;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Product product = (Product) o;
-        return id != null && Objects.equals(id, product.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
-    }
+    @Column(name = "PRODUCT_STOCK")
+    private String productStock;
 }
