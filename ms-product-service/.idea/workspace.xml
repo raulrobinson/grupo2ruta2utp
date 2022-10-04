@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="836d0d83-68a9-4439-abf1-9f4aeb8948c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ms-frontend-service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grupo2/utp/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grupo2/utp/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grupo2/utp/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grupo2/utp/service/ProductService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

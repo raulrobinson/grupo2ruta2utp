@@ -1,0 +1,93 @@
+==========================================================
+
+GET - http://localhost:9001/api/v1		Get Public Content.
+
+==========================================================
+
+GET - http://localhost:9001/api/v1/user	Get User Content.
+GET - http://localhost:9001/api/v1/mod	Get Moderator Content.
+GET - http://localhost:9001/api/v1/admin	Get Administrator Content.
+
+==========================================================
+
+POST - localhost:9001/api/auth/signup	Create Users Register.
+
+Request:
+{
+    "email":"usuario@mail.com",
+    "username":"usuario",
+    "password":"Pass123*"
+}
+
+Response:
+{
+    "message": "Usuario registrado con éxito!"
+}
+
+==========================================================
+
+POST - localhost:9001/api/auth/signin	Post Users Login.
+
+Request:
+{
+    "username":"usuario",
+    "password":"Pass123*"
+}
+
+Response:
+{
+    "id": 3,
+    "username": "usuario",
+    "email": "usuario@mail.com",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "tokenType": "Bearer",
+    "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c3VhcmlvIiwiaWF0IjoxNjY0NzM0OTY1LCJleHAiOjE2NjQ4MjEzNjV9.7S18_ZPPZAtCghYDGVPyuCt9aaH2JFdUQAgMrDRZ2Oj47OjG4BG8RbN21q2buFfyaP7curGKFTTe5-OdsZtQww"
+}
+
+==========================================================
+
+GET - localhost:9000/api/v1/products/all	Get All Products Public Content.
+
+==========================================================
+
+GET - localhost:9000/api/v1/products 	Get Product By @Param Public Content.
+
+Request:
+	@Param = productId
+	@Param = productCode
+	@Param = productName
+	@Param = productType
+	@Param = productState
+
+Response:
+
+==========================================================
+
+POST - localhost:9000/api/v1/products	Create Product Authorized Content for Admin, User and Moderator Profile.
+
+Request:
+	@Body = DTO
+
+Response:
+
+==========================================================
+
+PUT - localhost:9000/api/v1/products	Modified Product Authorized Content for Moderator Profile.
+
+Request:
+	@Body = DTO
+
+Response:
+
+==========================================================
+
+DELETE - localhost:9000/api/v1/products	Delete Product Authorized Content for Admin Profile.
+
+Request:
+	@Body = DTO
+
+Response:
+
+==========================================================
