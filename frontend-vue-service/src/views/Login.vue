@@ -2,7 +2,6 @@
   <div class="login">
     <div class="wrapper fadeInDown">
       <div id="formContent">
-        <!-- Tabs Titles -->
 
         <!-- Icon -->
         <div class="fadeIn first">
@@ -23,7 +22,6 @@
 
       </div>
     </div>
-
   </div>
 </template>
 
@@ -40,7 +38,7 @@ export default {
       username: "",
       password: "",
       error: false,
-      error_msg: ""
+      error_msg: "",
     }
   },
   methods: {
@@ -51,22 +49,22 @@ export default {
       };
       axios.post('http://localhost:9001/api/auth/signin', json)
         .then(data => {
-          console.log(data)
           if (data.data.tokenType == "Bearer") {
             localStorage.token = data.data.accessToken;
             this.$router.push('dashboard');
           }
         })
-        .catch(() => {
-          this.errored = true
-          this.error = true;
-          this.error_msg = "Acceso no Autorizado.."
+        .catch(data => {
+          if (data.data.error == 401) {
+            this.error = true;
+            this.error_msg = 401;
+          }
         })
-        .finally(() => this.loading = false)
     }
   }
 }
 </script>
+
 
 <style scoped>
 /* BASIC */

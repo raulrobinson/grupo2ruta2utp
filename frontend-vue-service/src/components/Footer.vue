@@ -1,24 +1,17 @@
 <template>
-    <div class="footer">
+    <div>
         <footer>
-            Raul Bolivar
+            Grupo2 - MinTIC - UTP
         </footer>
     </div>
 </template>
-<script>
-export default {
-    name: 'FooterView',
-    components: {
-    }
-}
-</script>
 <style  scoped>
 footer {
     position: fixed;
     height: 100px;
     bottom: 0;
     width: 100%;
-    background-color: black;
-    color: blanchedalmond;
+    background-color: #333;
+    color: white;
 }
 </style>
